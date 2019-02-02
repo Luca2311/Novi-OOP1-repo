@@ -8,11 +8,8 @@ namespace ConsoleApp3.Razredi
 {
     class BezalkoholnaPice:Pice
     {
-        public BezalkoholnaPice(string opis,int kolicina,double cijena )
+        public BezalkoholnaPice(string opis,int kolicina,double cijena ):base(opis,kolicina,cijena)
         {
-            this.opis = opis;
-            this.kolicina = kolicina;
-            this.cijena = cijena;
         }
 
         public override string Opis()

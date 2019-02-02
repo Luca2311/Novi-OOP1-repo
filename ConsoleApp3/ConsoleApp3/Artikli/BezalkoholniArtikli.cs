@@ -14,18 +14,17 @@ namespace ConsoleApp3.Artikli
         }
         public override string Opis()
         {
-            return base.Opis();
+            return base.Opis()+"\n";
         }
     }
     class Cappuccino : BezalkoholnaPice
     {
         public Cappuccino(string _Op, int _Kol, double _Cij) : base(_Op, _Kol, _Cij )
         {
-            this.volumen = volumen * 1000;
         }
         public override string Opis()
         {
-            return base.Opis();
+            return base.Opis()+"\n";
         }
     }
     class Sok : BezalkoholnaPice
@@ -33,11 +32,12 @@ namespace ConsoleApp3.Artikli
         private string vrsta; 
         public Sok (string _Op, int _Kol, double _Cij, string _Vrsta) : base(_Op, _Kol, _Cij)
         {
-            this.volumen = volumen * 10;
+            this.vrsta = _Vrsta;
         }
         public override string Opis()
         {
-            return base.Opis();
+            return base.Opis()+
+             String.Format("Vrsta soka:{0}\n\n",vrsta);
         }
     }
 }

@@ -32,7 +32,7 @@ namespace ConsoleApp3.Artikli
     {
         public Vina (string _Op, int _Kol, double _Cij, double _Vol, double _Alk) : base(_Op, _Kol, _Cij, _Vol, _Alk)
         {
-            this.volumen = volumen* 10;
+            
         }
         public override string Opis()
         {

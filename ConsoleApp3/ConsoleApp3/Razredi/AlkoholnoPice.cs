@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3.Razredi
 {
-    class AlkoholnoPice:BezalkoholnaPice
+    class AlkoholnoPice:Pice
         
     {
         protected double alkohol; 
@@ -18,8 +18,8 @@ namespace ConsoleApp3.Razredi
 
         public override string Opis()
         {
-            return base.Opis() + String.Format("Volumen:{0},\n" +
-                "kolicina alkohola {01}%\n", volumen,alkohol);
+            return base.Opis() + String.Format("Volumen:{0} litra,\n" +
+                "kolicina alkohola {01}%\n\n", volumen,alkohol);
 
         }
 

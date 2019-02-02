@@ -13,12 +13,33 @@ namespace ConsoleApp3.Razredi
         protected int kolicina;
         protected string opis;
 
+        public Pice(string opis, int kolicina, double cijena)
+        {
+            this.opis = opis;
+            this.kolicina = kolicina;
+            this.cijena = cijena;
+        }
+
+        public string VratiImePica()
+        { return opis; }
+
+        public int VratiKolicinu()
+        {
+            return kolicina;
+        }
+
+        public void NovaKolicina(int novKol)
+        {
+            this.kolicina = novKol;
+        }
+
+
         public virtual  string Opis()
         {
             return String.Format(
                 "Pice:{0},\n" +
                 "Cijena:{1}kn,\n" +
-                "Kolicina:{2},\n" 
+                "Kolicina:{2} komada,\n" 
                 ,
                 opis,cijena,kolicina);
         }
