@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3.Razredi
 {
-
+    
     class KaficBarflay
     {
         protected List<Pice> ListaPica = new List<Pice>();
+        private double racun = 0;
 
         public void DodajUskladiste(Pice pijaca)
         {
@@ -31,7 +32,9 @@ namespace ConsoleApp3.Razredi
             }
         }
 
-        public void OduzmiOdSkladista(Pice pice)
+        
+
+        public void OduzmiOdSkladista(Pice pice, int kolicina)
         {
             string a = pice.VratiImePica();
             int kol1 = pice.VratiKolicinu();
@@ -40,12 +43,20 @@ namespace ConsoleApp3.Razredi
                 string b = p.VratiImePica();
                 if (a==b)
                 {
-                    kol1 -= p.VratiKolicinu();
+                    kol1 -= p.VratiKolicinuKupljenog();
+                    racun += (p.VratiKolicinuKupljenog() * p.VratiCijenu());
+
                 }
             }
 
             pice.NovaKolicina(kol1);
         }
+
+        public double izlazRacunPoPicu()
+        {
+            return racun;
+        }
+        
 
 
     }

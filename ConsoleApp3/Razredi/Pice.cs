@@ -12,6 +12,7 @@ namespace ConsoleApp3.Razredi
         protected double cijena;
         protected int kolicina;
         protected string opis;
+        protected int kolicinaKupljenog;
 
         public Pice(string opis, int kolicina, double cijena)
         {
@@ -32,7 +33,19 @@ namespace ConsoleApp3.Razredi
         {
             this.kolicina = novKol;
         }
+        public void ZadajKolicinuKupljenog(int kolKupca)
+        {
+            this.kolicinaKupljenog = kolKupca;
+        }
+        public int VratiKolicinuKupljenog()
+        {
+            return kolicinaKupljenog;
+        }
 
+        public double VratiCijenu()
+        {
+            return cijena;
+        }
 
         public virtual  string Opis()
         {

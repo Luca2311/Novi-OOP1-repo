@@ -8,13 +8,12 @@ namespace ConsoleApp3.Razredi
 {
     class Kupac
     {
-        private List<Pice> KupljenaPijaca = new List<Pice>();
         private double novci = 0;
-        private int kol = 0;
+        private Pice kaPice;
         public void KupiPice(Pice pice,int kolici)
         {
-            kol=3;
-            KupljenaPijaca.Add(pice);
+            this.kaPice = pice;
+            pice.ZadajKolicinuKupljenog(kolici);
         }
 
         public Kupac(double pare)
@@ -22,14 +21,12 @@ namespace ConsoleApp3.Razredi
             novci = pare;
         }
 
-        public void Racun()
+        public Pice VratiKuPice()
         {
-            foreach (Pice p in KupljenaPijaca)
-            {
-                Console.Write(p.Opis());
-                //dodali cijenu racuna
-            }
+            return kaPice;
         }
+
+
 
 
     }
